@@ -60,16 +60,10 @@ class MyClient(discord.Client):
             role = discord.utils.get(guild.roles, name='rainbow 6')
             await member.remove_roles(role)
 
-def getToken():
-    token_file = open("token.txt", "r")
-
-    token = token_file.readline()
-
-    return token
 
 
 intents = discord.Intents.default()
 intents.members = True
 
 client = MyClient(intents=intents)
-client.run(getToken())
+client.run(os.getenv("DISCORD_TOKEN"))
