@@ -1,4 +1,5 @@
 import discord
+import os
 
 class MyClient(discord.Client):
     def __init__(self, *args, **kwargs):
@@ -66,4 +67,4 @@ intents = discord.Intents.default()
 intents.members = True
 
 client = MyClient(intents=intents)
-client.run(os.getenv("DISCORD_TOKEN"))
+client.run('OTg2NzM2NjA0MDIwMzQ2ODgw.GcrZuM.a3J0itmUy0Pj-smz9MgZgwc6SwmMIxx0TEPxdA')
