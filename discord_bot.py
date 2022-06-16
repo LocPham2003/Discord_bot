@@ -66,5 +66,7 @@ class MyClient(discord.Client):
 intents = discord.Intents.default()
 intents.members = True
 
+token = os.environ.get('DISCORD_TOKEN')
+
 client = MyClient(intents=intents)
-client.run('OTg2NzM2NjA0MDIwMzQ2ODgw.GcrZuM.a3J0itmUy0Pj-smz9MgZgwc6SwmMIxx0TEPxdA')
+client.run(token)
