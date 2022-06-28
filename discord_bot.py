@@ -33,7 +33,7 @@ class MyClient(discord.Client):
         elif payload.emoji.name == '🇷':
             role = discord.utils.get(guild.roles, name='rainbow 6')
             await payload.member.add_roles(role)
-        elif payload.emoji.name == 'O':
+        elif payload.emoji.name == ':regional_indicator_o:':
             role = discord.utils.get(guild.roles, name='phasmophobia')
             await payload.member.add_roles(role)
 
@@ -63,7 +63,7 @@ class MyClient(discord.Client):
         elif payload.emoji.name == '🇷':
             role = discord.utils.get(guild.roles, name='rainbow 6')
             await member.remove_roles(role)
-        elif payload.emoji.name == 'O':
+        elif payload.emoji.name == ':regional_indicator_o:':
             role = discord.utils.get(guild.roles, name='phasmophobia')
             await member.remove_roles(role)
 
