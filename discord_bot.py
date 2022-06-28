@@ -33,6 +33,9 @@ class MyClient(discord.Client):
         elif payload.emoji.name == '🇷':
             role = discord.utils.get(guild.roles, name='rainbow 6')
             await payload.member.add_roles(role)
+        elif payload.emoji.name == 'O':
+            role = discord.utils.get(guild.roles, name='phasmophobia')
+            await payload.member.add_roles(role)
 
     async def on_raw_reaction_remove(self, payload):
 
@@ -60,6 +63,9 @@ class MyClient(discord.Client):
         elif payload.emoji.name == '🇷':
             role = discord.utils.get(guild.roles, name='rainbow 6')
             await member.remove_roles(role)
+        elif payload.emoji.name == 'O':
+            role = discord.utils.get(guild.roles, name='phasmophobia')
+            await member.remove_roles(role)
 
 
 
@@ -67,6 +73,5 @@ intents = discord.Intents.default()
 intents.members = True
 
 token = os.environ.get('DISCORD_TOKEN')
-
 client = MyClient(intents=intents)
 client.run(token)
